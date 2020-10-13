@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Show";
+}
+
+<h1>Show</h1>
+<div class="modal-footer">
+    <button type="button" class="layui-btn layui-btn-sm" data-dismiss="modal" v-on:click="Pwd">添加</button>
+    <button type="button" class="layui-btn layui-btn-sm" data-dismiss="modal">删除</button>
+    <button type="button" class="layui-btn layui-btn-sm" data-dismiss="modal">修改</button>
+</div>
+<table class="layui-table" lay-even lay-skin="line" lay-size="lg">
+    <thead>
+        <tr>
+            <td>编号</td>
+            <td>订单号</td>
+            <td>下单时间</td>
+            <td>委托方</td>
+            <td>始发地</td>
+            <td>目的地</td>
+            <td>货物</td>
+            <td>重量kg</td>
+            <td>状态</td>
+        </tr>
+    </thead>
+    <tbody v-for="item in message">
+        <tr>
+            <td>{{item.dDid}}</td>
+            <td>{{item.orderNumber}}</td>
+            <td>{{item.xDTime}}</td>
+            <td>{{item.client}}</td>
+            <td>{{item.lindisfarne}}</td>
+            <td>{{item.destination}}</td>
+            <td>{{item.goods}}</td>
+            <td>{{item.weight}}</td>
+            <td>{{item.state==1?"已发货":"过期"}}</td>
+    </tbody>
+</table>
+<table class="layui-table" lay-even lay-skin="line" lay-size="lg">
+    <colgroup>
+
+        <col width="200">
+        <col width="150">
+        <col>
+    </colgroup>
+
+
+
+
+</table>
